@@ -1,94 +1,38 @@
-/* Configurações Globais e Variáveis de Cores (Alto Contraste) */
-:root {
-    --fundo-escuro: #121212;
-    --texto-claro: #F5F5F5;
-    --destaque-amarelo: #FFD700;
-    --fundo-card: #1E1E1E;
-}
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
-body {
-    background-color: var(--fundo-escuro);
-    color: var(--texto-claro);
-    line-height: 1.6;
-    padding: 20px;
-}
-
-/* Cabeçalho */
-header {
-    text-align: center;
-    padding: 40px 10px;
-    border-bottom: 3px solid var(--destaque-amarelo);
-    margin-bottom: 30px;
-}
-
-header h1 {
-    color: var(--destaque-amarelo);
-    font-size: 2.5rem;
-}
-
-/* Seções e Responsividade */
-main {
-    max-width: 800px;
-    margin: 0 auto;
-}
-
+/* Efeito de elevação nos cards ao passar o mouse */
 section {
-    margin-bottom: 50px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-h2 {
-    color: var(--destaque-amarelo);
-    margin-bottom: 15px;
+section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
 }
 
-/* Cards de Código */
-.codigo-card {
-    background-color: var(--fundo-card);
-    padding: 20px;
-    border-radius: 8px;
-    margin-bottom: 20px;
-    border-left: 4px solid gray;
+/* Transição suave nos botões */
+.btn-acc {
+    transition: background-color 0.2s ease, transform 0.1s ease;
 }
 
-.codigo-card.destaque {
-    border-left: 4px solid var(--destaque-amarelo);
+.btn-acc:active {
+    transform: scale(0.95);
 }
-
-/* Botões Acessíveis */
-.btn-download {
-    background-color: var(--destaque-amarelo);
-    color: #000;
-    border: none;
-    padding: 10px 20px;
-    font-weight: bold;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-top: 15px;
-    font-size: 1rem;
-    transition: transform 0.2s;
-}
-
-/* Foco para quem navega pelo teclado (Acessibilidade) */
-.btn-download:focus, a:focus {
-    outline: 3px solid white;
+/* Destaque acessível para elementos focados via teclado */
+a:focus-visible, button:focus-visible {
+    outline: 3px solid #64ffda;
     outline-offset: 3px;
 }
+@media (max-width: 600px) {
+    .accessibility-bar {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .btn-acc {
+        width: 100%;
+        margin-bottom: 5px;
+    }
 
-.btn-download:hover {
-    transform: scale(1.05);
-}
-
-/* Imagens */
-.imagem-responsiva {
-    max-width: 100%;
-    height: auto;
-    border-radius: 8px;
-    margin-top: 15px;
+    header h1 {
+        font-size: 1.6rem;
+    }
 }

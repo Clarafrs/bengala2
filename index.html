@@ -3,57 +3,177 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projeto Bengala Inteligente</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Bengala Ultrassônica Inteligente - Acessibilidade e Mobilidade</title>
+    <style>
+        :root {
+            --bg-primary: #0a192f;
+            --bg-secondary: #172a45;
+            --text-color: #f1f5f9;
+            --accent-color: #38bdf8;
+            --card-bg: #1e293b;
+            --font-size: 16px;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            font-size: var(--font-size);
+            background-color: var(--bg-primary);
+            color: var(--text-color);
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        /* Barra de Acessibilidade Fixed */
+        .accessibility-bar {
+            background-color: #020617;
+            padding: 10px 20px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            align-items: center;
+            justify-content: space-between;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 2px solid var(--accent-color);
+        }
+
+        .btn-acc {
+            background-color: var(--accent-color);
+            color: #020617;
+            border: none;
+            padding: 8px 14px;
+            font-weight: bold;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .btn-acc:hover, .btn-acc:focus {
+            outline: 3px solid #ffffff;
+            background-color: #7dd3fc;
+        }
+
+        header {
+            padding: 60px 20px;
+            text-align: center;
+            background: linear-gradient(180deg, var(--bg-primary) 0%, var(--bg-secondary) 100%);
+        }
+
+        h1 {
+            color: var(--accent-color);
+            font-size: 2.2rem;
+            margin-bottom: 10px;
+        }
+
+        main {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        section {
+            background-color: var(--card-bg);
+            margin-bottom: 25px;
+            padding: 25px;
+            border-radius: 8px;
+            border-left: 5px solid var(--accent-color);
+        }
+
+        h2 {
+            color: var(--accent-color);
+            margin-top: 0;
+        }
+
+        ol, ul {
+            padding-left: 20px;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #020617;
+            margin-top: 40px;
+        }
+    </style>
 </head>
 <body>
+
+    <aside class="accessibility-bar" aria-label="Painel de Acessibilidade">
+        <div>
+            <strong>Acessibilidade:</strong>
+            <button class="btn-acc" onclick="lerTexto()" aria-label="Ouvir texto da página">🔊 Ler Página</button>
+            <button class="btn-acc" onclick="pararLeitura()" aria-label="Parar leitura de voz">Parar Voz</button>
+        </div>
+        <div>
+            <button class="btn-acc" onclick="alterarFonte(2)" aria-label="Aumentar tamanho do texto">A+</button>
+            <button class="btn-acc" onclick="alterarFonte(-2)" aria-label="Diminuir tamanho do texto">A-</button>
+        </div>
+    </aside>
+
     <header>
-        <h1>Projeto Bengala Inteligente 🚶‍♂️🔊</h1>
-        <p>Tecnologia e Robótica para Maior Acessibilidade</p>
+        <h1>Bengala Ultrassônica Inteligente</h1>
+        <p>Tecnologia assistiva para ampliação da percepção e mobilidade urbana com segurança.</p>
     </header>
 
-    <main>
-        <!-- Seção da História -->
-        <section id="sobre">
-            <h2>Nossa Inspiração</h2>
-            <p>Criamos este projeto para ajudar pessoas com deficiência visual a desviarem de obstáculos com mais segurança, usando um sensor ultrassônico e um buzzer.</p>
+    <main id="conteudo-principal">
+        <section>
+            <h2>1. O Propósito do Projeto</h2>
+            <p>Pessoas com deficiência visual enfrentam, diariamente, diversas barreiras para se locomover com segurança nos espaços urbanos. A bengala tradicional é uma ferramenta fundamental, porém apresenta limitações para identificar obstáculos acima da altura do solo, como galhos, orelhões, placas e caçambas.</p>
+            <p>Nosso projeto transforma a bengala tradicional em um dispositivo ativo de auxílio à mobilidade. Através de alertas antecipados, o sistema amplia o campo de percepção do usuário sem substituir a importância do uso do equipamento convencional.</p>
         </section>
 
-        <!-- Seção de Montagem e Vídeo -->
-        <section id="como-funciona">
-            <h2>Como Funciona na Prática</h2>
-            <!-- Coloque o link do seu vídeo do YouTube aqui -->
-            <div class="video-container">
-                <p>[ 🎥 Espaço para o vídeo de vocês usando a bengala ]</p>
-            </div>
-            
-            <h3>Esquema de Montagem</h3>
-            <!-- Exemplo de texto alternativo descritivo -->
-            <img src="link-da-sua-imagem.jpg" alt="Diagrama mostrando o sensor HC-SR04 conectado aos pinos digitais do Arduino e o Buzzer conectado ao pino 9." class="imagem-responsiva">
+        <section>
+            <h2>2. Como Funciona a Tecnologia</h2>
+            <p>O sistema baseia-se no princípio da <strong>ecolocalização</strong> (semelhante ao utilizado por morcegos) e atua em três etapas:</p>
+            <ol>
+                <li><strong>Emissão do Pulso Ultrassônico:</strong> Um sensor emite ondas sonoras imperceptíveis ao ouvido humano que se propagam pelo ambiente.</li>
+                <li><strong>Cálculo de Distância:</strong> O microcontrolador mede o tempo de retorno da onda refletida pelo objeto para calcular a distância exata.</li>
+                <li><strong>Sistema de Alerta:</strong> Emite avisos sonoros (buzzer) com frequência proporcional à proximidade do objeto ou alertas por vibração no cabo.</li>
+            </ol>
         </section>
 
-        <!-- Seção dos Códigos -->
-        <section id="codigos">
-            <h2>Evolução do Código</h2>
-            
-            <div class="codigo-card">
-                <h3>Versão 1.0 - O Início</h3>
-                <p>Nesta versão, o som só saía quando o obstáculo estava muito em cima, o que não dava tempo de reação.</p>
-                <button class="btn-download" aria-label="Baixar primeiro código do Arduino">Baixar Código 1</button>
-            </div>
-
-            <div class="codigo-card destaque">
-                <h3>Versão 2.0 - Aprimorada 🚀</h3>
-                <p>Ajustamos o cálculo da distância. Agora a bengala apita em uma distância segura e o ritmo do bipe aumenta conforme o obstáculo se aproxima!</p>
-                <button class="btn-download" aria-label="Baixar código atualizado do Arduino">Baixar Código 2</button>
-            </div>
+        <section>
+            <h2>3. Benefícios e Impacto</h2>
+            <ul>
+                <li><strong>Mais Autonomia:</strong> Reduz a dependência de acompanhamento constante.</li>
+                <li><strong>Prevenção de Acidentes:</strong> Detecção antecipada de colisões aéreas e terrestres.</li>
+                <li><strong>Acessibilidade de Baixo Custo:</strong> Protótipo viável montado com componentes eletrônicos acessíveis.</li>
+                <li><strong>Fácil Adaptação:</strong> Integração direta ao corpo da bengala tradicional.</li>
+            </ul>
         </section>
     </main>
 
     <footer>
-        <p>Desenvolvido com 💻 e 💡 para a Feira de Ciências / Robótica.</p>
+        <p>&copy; Projeto de Acessibilidade - Tecnologia Assistiva</p>
     </footer>
 
-    <script src="script.js"></script>
+    <script>
+        let tamanhoFonte = 16;
+
+        function alterarFonte(delta) {
+            tamanhoFonte += delta;
+            if (tamanhoFonte < 12) tamanhoFonte = 12;
+            if (tamanhoFonte > 26) tamanhoFonte = 26;
+            document.documentElement.style.setProperty('--font-size', tamanhoFonte + 'px');
+        }
+
+        function lerTexto() {
+            window.speechSynthesis.cancel();
+            const texto = document.getElementById('conteudo-principal').innerText;
+            const mensagem = new SpeechSynthesisUtterance(texto);
+            mensagem.lang = 'pt-BR';
+            mensagem.rate = 1.0;
+            window.speechSynthesis.speak(mensagem);
+        }
+
+        function pararLeitura() {
+            window.speechSynthesis.cancel();
+        }
+    </script>
 </body>
 </html>
