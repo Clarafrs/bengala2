@@ -36,3 +36,29 @@ a:focus-visible, button:focus-visible {
         font-size: 1.6rem;
     }
 }
+.authors-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.author-card {
+    background: var(--bg-secondary);
+    padding: 20px;
+    border-radius: 8px;
+    border-top: 3px solid var(--accent-cyan);
+    text-align: center;
+}
+
+.author-card h3 {
+    color: var(--accent-cyan);
+    margin-bottom: 5px;
+    font-size: 1.1rem;
+}
+
+.author-card p {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    margin-bottom: 0;
+}
