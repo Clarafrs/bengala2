@@ -75,12 +75,25 @@
             transform: translateY(-2px);
         }
 
-        .select-acc {
-            background-color: var(--card-bg);
-            color: var(--text-main);
-            border: 1px solid var(--accent-blue);
-            padding: 8px;
-            border-radius: 6px;
+        /* Botão de Áudio da Seção */
+        .btn-audio {
+            background-color: var(--accent-blue);
+            color: #020617;
+            border: none;
+            padding: 8px 16px;
+            font-weight: bold;
+            border-radius: 20px;
+            cursor: pointer;
+            margin-bottom: 15px;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: transform 0.2s ease, background-color 0.2s ease;
+        }
+
+        .btn-audio:hover {
+            background-color: var(--accent-cyan);
+            transform: scale(1.03);
         }
 
         /* Hero Header */
@@ -124,7 +137,7 @@
         h2 {
             color: var(--accent-blue);
             font-size: 1.8rem;
-            margin-bottom: 20px;
+            margin-bottom: 15px;
             display: flex;
             align-items: center;
             gap: 10px;
@@ -188,6 +201,34 @@
             font-size: 1.1rem;
         }
 
+        /* Grid de Autores */
+        .authors-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .author-card {
+            background: var(--bg-secondary);
+            padding: 20px;
+            border-radius: 8px;
+            border-top: 3px solid var(--accent-cyan);
+            text-align: center;
+        }
+
+        .author-card h3 {
+            color: var(--accent-cyan);
+            margin-bottom: 5px;
+            font-size: 1.1rem;
+        }
+
+        .author-card p {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            margin-bottom: 0;
+        }
+
         footer {
             text-align: center;
             padding: 30px;
@@ -207,14 +248,8 @@
 
     <aside class="accessibility-bar" aria-label="Painel de Acessibilidade">
         <div class="acc-group">
-            <strong>Voz Nativa:</strong>
-            <button class="btn-acc" onclick="lerTexto()" aria-label="Iniciar leitura acessível">🔊 Ouvir Página</button>
-            <button class="btn-acc" onclick="pararLeitura()" aria-label="Parar áudio">⏹️ Parar</button>
-            <select id="velocidadeVoz" class="select-acc" onchange="alterarVelocidade()" aria-label="Velocidade da voz">
-                <option value="0.8">0.8x (Mais Lenta)</option>
-                <option value="1.0" selected>1.0x (Normal)</option>
-                <option value="1.2">1.2x (Rápida)</option>
-            </select>
+            <strong>Acessibilidade:</strong>
+            <button class="btn-acc" onclick="pararTodosAudios()" aria-label="Parar todos os áudios em execução">⏹️ Parar Áudio</button>
         </div>
         <div class="acc-group">
             <strong>Tamanho do Texto:</strong>
@@ -230,33 +265,41 @@
 
     <main id="conteudo-principal">
 
-        <section>
+        <section id="proposito">
             <h2>1. O Propósito do Projeto</h2>
+            <button class="btn-audio" onclick="tocarAudio('audio-sec1')">
+                🎧 Ouvir narração desta seção
+            </button>
+            <audio id="audio-sec1" src="audios/proposito.mp3"></audio>
+
             <p>Pessoas com deficiência visual enfrentam diariamente diversas barreiras para se locomover com segurança nos espaços urbanos. A bengala tradicional é fundamental para identificar obstáculos no solo, porém apresenta limitações para detectar ameaças suspensas.</p>
             <p>Objetos como galhos de árvores, orelhões, placas informativas e caçambas representam riscos de colisão. Nosso projeto transforma o dispositivo convencional em um assistente ativo capaz de emitir alertas antecipados de proximidade sem substituir o uso tátil da bengala tradicional.</p>
         </section>
 
-        <section>
+        <section id="demonstracao">
             <h2>2. Apresentação do Protótipo (Fotos e Vídeos)</h2>
+            <button class="btn-audio" onclick="tocarAudio('audio-sec2')">
+                🎧 Ouvir narração desta seção
+            </button>
+            <audio id="audio-sec2" src="audios/demonstracao.mp3"></audio>
+
             <p>Confira a estrutura física desenvolvida, o posicionamento dos sensores e o teste de funcionamento em tempo real:</p>
             
             <div class="media-grid">
                 <article class="media-card">
-                    <!-- Substitua o src pelo caminho da sua imagem -->
-                    <img src="https://via.placeholder.com/600x400/112240/64ffda?text=Foto+da+Bengala+Completa" alt="Foto demonstrativa da bengala inteligente montada com o sensor na parte superior.">
+                    <!-- Substitua o src pelo caminho da sua imagem gravada na pasta do GitHub -->
+                    <img src="imagens/bengala-completa.jpg" alt="Foto demonstrativa da bengala inteligente montada com o sensor na parte superior.">
                     <div class="caption">Visão geral da estrutura leve adaptada no cabo da bengala.</div>
                 </article>
 
                 <article class="media-card">
-                    <!-- Substitua o src pelo caminho da sua imagem -->
-                    <img src="https://via.placeholder.com/600x400/112240/38bdf8?text=Detalhe+do+Sensor+HC-SR04" alt="Visão aproximada do sensor ultrassônico instalado na bengala.">
+                    <img src="imagens/detalhe-sensor.jpg" alt="Visão aproximada do sensor ultrassônico instalado na bengala.">
                     <div class="caption">Posicionamento inclinado do sensor ultrassônico para varredura aérea.</div>
                 </article>
 
                 <article class="media-card">
-                    <!-- Substitua o src pelo vídeo demonstrativo -->
-                    <video controls poster="https://via.placeholder.com/600x400/112240/ffffff?text=Clique+para+Assistir+o+Teste">
-                        <source src="seu-video.mp4" type="video/mp4">
+                    <video controls poster="imagens/thumb-video.jpg">
+                        <source src="videos/demonstracao.mp4" type="video/mp4">
                         Seu navegador não suporta a exibição de vídeos diretos.
                     </video>
                     <div class="caption">Demonstração prática: detecção de um obstáculo aéreo com emissão de alerta sonoro.</div>
@@ -264,8 +307,13 @@
             </div>
         </section>
 
-        <section>
+        <section id="tecnologia">
             <h2>3. Arquitetura e Componentes da Tecnologia</h2>
+            <button class="btn-audio" onclick="tocarAudio('audio-sec3')">
+                🎧 Ouvir narração desta seção
+            </button>
+            <audio id="audio-sec3" src="audios/tecnologia.mp3"></audio>
+
             <p>A bengala baseia-se no princípio da ecolocalização. O sistema opera emitindo ondas imperceptíveis ao ouvido humano e calculando a distância pelo tempo de resposta da onda.</p>
             
             <div class="tech-grid">
@@ -288,41 +336,53 @@
             </div>
         </section>
 
-        <section>
+        <section id="beneficios">
             <h2>4. Impacto Social e Benefícios</h2>
+            <button class="btn-audio" onclick="tocarAudio('audio-sec4')">
+                🎧 Ouvir narração desta seção
+            </button>
+            <audio id="audio-sec4" src="audios/beneficios.mp3"></audio>
+
             <p><strong>Autonomia Ampliada:</strong> Reduz a hesitação e a dependência durante o deslocamento.</p>
             <p><strong>Prevenção Eficiente:</strong> Antecipa perigos a até 1,5 metro de distância.</p>
             <p><strong>Custo Acessível:</strong> Montado com eletrônica aberta de baixo custo, viabilizando a inclusão em larga escala.</p>
         </section>
 
+        <section id="creditos">
+            <h2>5. Autores e Créditos</h2>
+            <button class="btn-audio" onclick="tocarAudio('audio-sec5')">
+                🎧 Ouvir narração desta seção
+            </button>
+            <audio id="audio-sec5" src="audios/creditos.mp3"></audio>
+
+            <p>Projeto desenvolvido pela equipe de tecnologia assistiva:</p>
+            
+            <div class="authors-grid">
+                <article class="author-card">
+                    <h3>Nome do Integrante 1</h3>
+                    <p>Pesquisa e Documentação</p>
+                </article>
+
+                <article class="author-card">
+                    <h3>Nome do Integrante 2</h3>
+                    <p>Desenvolvimento e Hardware</p>
+                </article>
+
+                <article class="author-card">
+                    <h3>Nome do Integrante 3</h3>
+                    <p>Design Web e Acessibilidade</p>
+                </article>
+            </div>
+        </section>
+
     </main>
 
     <footer>
-        <p>&copy; 2026 Projeto Bengala Ultrassônica Inteligente — Tecnologia Assistiva Aberta</p>
+        <p>&copy; Projeto Bengala Ultrassônica Inteligente — Tecnologia Assistiva Aberta</p>
     </footer>
 
     <script>
         let tamanhoFonte = 16;
-        let vozOtimizada = null;
-        let velocidade = 1.0;
-
-        // Seleção de voz de alta qualidade nativa do sistema
-        function carregarVozes() {
-            const vozes = window.speechSynthesis.getVoices();
-            // Procura vozes "Google", "Natural" ou nativas do Brasil
-            vozOtimizada = vozes.find(v => v.lang.includes('pt') && (v.name.includes('Natural') || v.name.includes('Google') || v.name.includes('Luciana') || v.name.includes('Daniel')))
-                           || vozes.find(v => v.lang.includes('pt-BR'))
-                           || vozes.find(v => v.lang.includes('pt'));
-        }
-
-        if (typeof speechSynthesis !== 'undefined') {
-            window.speechSynthesis.onvoiceschanged = carregarVozes;
-            carregarVozes();
-        }
-
-        function alterarVelocidade() {
-            velocidade = parseFloat(document.getElementById('velocidadeVoz').value);
-        }
 
         function alterarFonte(delta) {
             tamanhoFonte += delta;
@@ -331,48 +391,31 @@
             document.documentElement.style.setProperty('--font-size', tamanhoFonte + 'px');
         }
 
-        function lerTexto() {
-            window.speechSynthesis.cancel();
-            
-            const texto = document.getElementById('conteudo-principal').innerText;
-            const mensagem = new SpeechSynthesisUtterance(texto);
-            
-            if (vozOtimizada) {
-                mensagem.voice = vozOtimizada;
+        function tocarAudio(idAudio) {
+            const todosAudios = document.querySelectorAll('audio');
+            todosAudios.forEach(audio => {
+                if (audio.id !== idAudio) {
+                    audio.pause();
+                    audio.currentTime = 0;
+                }
+            });
+
+            const audioAtual = document.getElementById(idAudio);
+
+            if (audioAtual.paused) {
+                audioAtual.play();
+            } else {
+                audioAtual.pause();
             }
-            
-            mensagem.lang = 'pt-BR';
-            mensagem.rate = velocidade;
-            mensagem.pitch = 1.0;
-            
-            window.speechSynthesis.speak(mensagem);
         }
 
-        function pararLeitura() {
-            window.speechSynthesis.cancel();
+        function pararTodosAudios() {
+            const todosAudios = document.querySelectorAll('audio');
+            todosAudios.forEach(audio => {
+                audio.pause();
+                audio.currentTime = 0;
+            });
         }
     </script>
-    <main> <section id="creditos">
-    <h2>5. Autores e Créditos</h2>
-    <p>Projeto desenvolvido pela equipe de tecnologia assistiva:</p>
-    
-    <div class="authors-grid">
-        <article class="author-card">
-            <h3>Nome do Integrante 1</h3>
-            <p>Pesquisa e Documentação</p>
-        </article>
-
-        <article class="author-card">
-            <h3>Nome do Integrante 2</h3>
-            <p>Desenvolvimento e Hardware</p>
-        </article>
-
-        <article class="author-card">
-            <h3>Nome do Integrante 3</h3>
-            <p>Design Web e Acessibilidade</p>
-        </article>
-    </div>
-</section>
-</main>
 </body>
 </html>

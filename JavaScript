@@ -25,4 +25,25 @@ function alterarVelocidade() {
     const vel = parseFloat(document.getElementById('velocidadeVoz').value);
     audio.playbackRate = vel;
 }
+// Função para controlar a reprodução individual por seção
+function tocarAudio(idAudio) {
+    // 1. Pausa e reseta todos os áudios da página
+    const todosAudios = document.querySelectorAll('audio');
+    todosAudios.forEach(audio => {
+        if (audio.id !== idAudio) {
+            audio.pause();
+            audio.currentTime = 0;
+        }
+    });
+
+    // 2. Seleciona o áudio atual
+    const audioAtual = document.getElementById(idAudio);
+
+    // 3. Alterna entre tocar e pausar
+    if (audioAtual.paused) {
+        audioAtual.play();
+    } else {
+        audioAtual.pause();
+    }
+}
 });
