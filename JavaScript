@@ -1,0 +1,9 @@
+// Seleciona todos os botões de download
+const botoes = document.querySelectorAll('.btn-download');
+
+// Adiciona uma ação quando eles são clicados
+botoes.forEach(botao => {
+    botao.addEventListener('click', () => {
+        alert("O download do código será iniciado! (Substitua esta ação pelo link do seu arquivo .ino)");
+    });
+});
