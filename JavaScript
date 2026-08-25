@@ -6,4 +6,23 @@ botoes.forEach(botao => {
     botao.addEventListener('click', () => {
         alert("O download do código será iniciado! (Substitua esta ação pelo link do seu arquivo .ino)");
     });
+// Obtém o elemento de áudio
+const audio = document.getElementById('audioNarracao');
+
+function lerTexto() {
+    // Se o áudio estiver pausado, ele toca
+    audio.play();
+}
+
+function pararLeitura() {
+    // Pausa o áudio e volta para o início
+    audio.pause();
+    audio.currentTime = 0;
+}
+
+function alterarVelocidade() {
+    // Altera a velocidade de reprodução do arquivo de áudio gravado
+    const vel = parseFloat(document.getElementById('velocidadeVoz').value);
+    audio.playbackRate = vel;
+}
 });
