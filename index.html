@@ -1,0 +1,1581 @@
+
+Gemini
+Nova conversa
+Pesquisar conversas
+Biblioteca
+Melhorias para Site de Tecnologia Assistiva
+Criando Site de Visão no GitHub
+Website Enhancement: Quiz and Simulator
+Criando Site de Tecnologia Médica no GitHub
+O Hino Nacional do Japão: Kimigayo
+Criação de Site Médico Tecnológico
+Era Azuchi-Momoyama: Unificação Japonesa
+Criação de Site Interativo Sobre IA
+Explorando o Japão: Cultura e Geografia
+Correção e Melhoria de Código HTML
+HTML Code Improvement and Correction
+Comparação e Melhoria de Código HTML
+Projeto do Site de Visão
+Japão: História, Cultura e Gastronomia
+Ajuda com Estudo ou Dúvida
+Mensagem Cortada, Ajuda Solicitada
+Configurando Botão de Alto Contraste Acessível
+Configurar Botão Alto Contraste Acessibilidade
+Bom Dia E Como Posso Ajudar
+Configuração de Site: Domínio, Plataforma e Conteúdo
+Criando um Site do Zero
+A Natureza Dual da Luz
+Guia para Escrever Artigo Científico
+Políticas Públicas e Redução Desigualdade
+Escolas Helenísticas: Busca pela Felicidade
+Helenismo: Economia e Sociedade Detalhadas
+Dinâmica: GPS e Rocha na Catequese
+Conversa com o Gemini
+como posso melhorar essa site? https://clarafrs.github.io/Pesquisa-da-bengala/
+
+O seu site sobre a Bengala Ultrassônica Inteligente apresenta um conteúdo muito bem estruturado, claro e relevante para a área de tecnologia assistiva.
+
+Como a proposta do projeto envolve acessibilidade e usabilidade, reuni abaixo sugestões organizadas por áreas para elevar o nível da sua página:
+
+1. Acessibilidade Web (Essencial para este tema)
+Por se tratar de um site voltado à inclusão e deficiência visual, a acessibilidade digital deve ser impecável:
+
+Inclusão de Leitores de Tela: Embora você tenha incluído um link para "Ir para o conteúdo principal", certifique-se de usar tags semânticas estruturadas (como <nav>, <main>, <section>, <header>, <footer>) para que navegadores e softwares de leitura de tela naveguem com facilidade.
+
+Ajuste de Contraste e Fontes: Verifique se o contraste de cor entre o texto e o fundo segue as diretrizes da WCAG 2.1 (mínimo de 4.5:1 para texto normal). Garanta que a fonte tenha um bom tamanho para leitura e espaçamento adequado.
+
+Leitura por voz e Atalhos: Considere adicionar botões acessíveis no topo da página para:
+
+Aumentar/diminuir tamanho da fonte.
+
+Alternar para Alto Contraste.
+
+Ativar leitura de áudio/voz sintetizada do próprio texto da página.
+
+2. Design e Experiência Visual (UI/UX)
+Adicionar Imagens e Diagramas: Inclua ilustrações, fotos do protótipo real ou esquemas do projeto. Caso inclua imagens, é indispensável adicionar o atributo alt com texto descritivo detalhado (ex: alt="Foto da bengala ultrassônica exibindo o sensor na parte superior").
+
+Organização dos Componentes em Cards: A seção "3. Componentes do Protótipo" se beneficiaria visualmente se disposta em cartões (cards) estilizados com CSS (utilizando CSS Grid ou Flexbox), adicionando pequenos ícones representativos para cada componente (ex: ícone de onda para o sensor, ícone de microchip para o microcontrolador).
+
+Responsividade: Verifique como a página é exibida em telas menores (smartphones) para garantir que não haja rolagem horizontal ou textos desalinhados.
+
+3. Melhorias no Link do Projeto e Ajuste de Texto
+Texto e Destino do Link Externo: O botão no final da página redireciona para o Tinkercad, mas o texto do link diz: "Ver Código Fonte e Esquema do Circuito no GitHub".
+
+Correção: Atualize o texto para "Ver Simulação do Circuito no Tinkercad" ou altere a URL para apontar diretamente para o repositório no GitHub, se houver um.
+
+Abertura em Nova Aba: Mantenha a boa prática de acessibilidade avisando visualmente ou por código (ex: aria-label="Abrir simulação no Tinkercad (abre em uma nova guia)") que o link direciona para fora do site.
+
+4. Elementos Adicionais Recomendados
+Demonstração em Vídeo/Mídia: Adicione um pequeno vídeo demonstrativo ou simulação em áudio/GIF da bengala emitindo os sinais sonoros/vibratórios ao se aproximar de um obstáculo.
+
+Seção de Equipe / Autoria: Adicione um rodapé (<footer>) ou uma seção indicando os autores do projeto, instituição de ensino/pesquisa (se aplicável), e formas de contato (ou link para o perfil do GitHub).
+
+Depoimentos ou Pesquisa de Campo: Se a pesquisa contou com feedback de pessoas com deficiência visual ou profissionais de orientação e mobilidade, vale criar uma seção com relatos e dados coletados.
+
+Exemplo Rápido de Ajuste no Código HTML/CSS
+1. Corrigindo o link no HTML:
+HTML
+<a href="https://www.tinkercad.com/things/8HfibT6SnAx-sensor-de-distancia/editel" 
+   rel="noopener noreferrer" 
+   target="_blank" 
+   aria-label="Ver simulação do circuito no Tinkercad (abre em uma nova guia)">
+    Ver Simulação e Esquema no Tinkercad
+</a>
+2. Adicionando meta tags importantes no <head>:
+HTML
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Projeto de tecnologia assistiva: Bengala Ultrassônica Inteligente para mobilidade e segurança visual.">
+<title>Bengala Ultrassônica Inteligente - Pesquisa e Protótipo</title>
+consegue recriar os códigos do site com essa melhorias? Eu também gostaria de melhorar a aparência do site, tá meio sem graça, e criar um botão de acessibilidade
+
+O código do seu site foi completamente reformulado e otimizado para transformar a experiência visual e de acessibilidade.
+
+O código-fonte atualizado está pronto para substituir o seu arquivo index.html no GitHub:
+
+Ícone do app HTML
+index
+ HTML 
+Aberto
+📋 Resumo das Melhorias Aplicadas
+1. ♿ Acessibilidade Integrada (Barra Superior Fixa)
+Botão de Leitura de Áudio (Text-to-Speech): Utiliza a API nativa dos navegadores para ler todo o conteúdo principal do site em voz alta ao clicar em "Ouvir Página".
+
+Modo Alto Contraste: Alterna o tema da página para um fundo 100% preto com texto branco e realces amarelos vibrantes (ideal para pessoas com baixa visão).
+
+Controle de Fonte (A+ / A-): Permite aumentar ou diminuir o tamanho dos textos diretamente na tela.
+
+Link de Atalho Teclado (Skip Link): Pressionar a tecla TAB ao carregar a página exibe a opção "Ir para o conteúdo principal", facilitando a navegação por teclado.
+
+Navegação Semântica & ARIA: Adicionadas tags como <main>, <header>, role="banner", role="main", e rótulos aria-label para leitores de tela como NVDA e TalkBack.
+
+2. 🎨 Design Moderno e Atraente
+Header Estilo Hero: Fundo com gradiente elegante em tons de azul e tipografia limpa (Lexend e Open Sans do Google Fonts).
+
+Cartões (Cards) de Componentes e Etapas: Os componentes do circuito eletrônico e o funcionamento do sistema foram organizados em cartões com sombras suaves, bordas arredondadas e efeito hover (ao passar o mouse).
+
+Ícones Ilustrativos Inteiramente Vetoriais: Integração com a biblioteca de ícones Lucide Icons para representar visualmente cada funcionalidade (sensor, bateria, alto-falante, ondas ultrassônicas).
+
+Grid Totalmente Responsivo: O layout se adapta a computadores, tablets e smartphones sem distorcer o conteúdo.
+
+3. 🛠️ Correções do Link Externo
+O botão de ação ao final da página foi corrigido para indicar explicitamente: "Ver Simulação no Tinkercad" (substituindo a menção incorreta ao GitHub), informando também leitores de tela que o link abre em uma nova guia.
+
+💻 Código Completo para Copiar e Colar
+Você pode salvar o código abaixo diretamente no seu arquivo index.html:
+
+HTML
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Projeto de tecnologia assistiva: Bengala Ultrassônica Inteligente para mobilidade, autonomia e segurança visual.">
+    <title>Bengala Ultrassônica Inteligente - Tecnologia Assistiva</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;600;700&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <style>
+        :root {
+            --primary: #1E3A8A;
+            --primary-light: #2563EB;
+            --accent: #F59E0B;
+            --accent-hover: #D97706;
+            --bg-body: #F8FAFC;
+            --bg-card: #FFFFFF;
+            --text-main: #0F172A;
+            --text-muted: #475569;
+            --border: #E2E8F0;
+            --font-main: 'Open Sans', sans-serif;
+            --font-title: 'Lexend', sans-serif;
+            --focus-ring: #2563EB;
+            --card-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+            --card-shadow-hover: 0 10px 15px -3px rgba(0, 0, 0, 0.08), 0 4px 6px -2px rgba(0, 0, 0, 0.04);
+        }
+
+        /* Alto Contraste */
+        body.high-contrast {
+            --primary: #FFFF00;
+            --primary-light: #FFFF00;
+            --accent: #FFFF00;
+            --accent-hover: #00FFFF;
+            --bg-body: #000000;
+            --bg-card: #000000;
+            --text-main: #FFFFFF;
+            --text-muted: #E2E8F0;
+            --border: #FFFFFF;
+            --focus-ring: #FFFF00;
+            --card-shadow: none;
+            --card-shadow-hover: none;
+        }
+
+        body.high-contrast .card, 
+        body.high-contrast .benefit-item,
+        body.high-contrast .step-card {
+            border: 2px solid #FFFFFF !important;
+        }
+
+        body.high-contrast .btn-primary,
+        body.high-contrast .accessibility-btn {
+            background-color: #FFFF00 !important;
+            color: #000000 !important;
+            border: 2px solid #FFFFFF !important;
+            font-weight: bold;
+        }
+
+        /* Reset e Base */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: var(--font-main);
+            background-color: var(--bg-body);
+            color: var(--text-main);
+            line-height: 1.7;
+            font-size: 1.05rem;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        /* Links de Atalho */
+        .skip-link {
+            position: absolute;
+            top: -40px;
+            left: 10px;
+            background: var(--accent);
+            color: #000;
+            padding: 8px 16px;
+            z-index: 1000;
+            font-weight: bold;
+            border-radius: 4px;
+            text-decoration: none;
+            transition: top 0.2s;
+        }
+
+        .skip-link:focus {
+            top: 10px;
+        }
+
+        /* Foco Acessível Globais */
+        a:focus-visible, button:focus-visible {
+            outline: 3px solid var(--focus-ring);
+            outline-offset: 3px;
+        }
+
+        /* Barra de Ferramentas de Acessibilidade */
+        .accessibility-bar {
+            background-color: #0F172A;
+            color: #FFFFFF;
+            padding: 8px 0;
+            position: sticky;
+            top: 0;
+            z-index: 999;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .accessibility-container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .accessibility-btn {
+            background: rgba(255, 255, 255, 0.1);
+            color: #FFFFFF;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            padding: 6px 12px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 0.9rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            transition: all 0.2s;
+            font-family: var(--font-main);
+        }
+
+        .accessibility-btn:hover {
+            background: rgba(255, 255, 255, 0.25);
+        }
+
+        /* Header / Banner Principal */
+        header {
+            background: linear-gradient(135deg, #1E3A8A 0%, #1E40AF 100%);
+            color: #FFFFFF;
+            padding: 70px 20px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        header::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.05) 0%, transparent 60%);
+            pointer-events: none;
+        }
+
+        body.high-contrast header {
+            background: #000000;
+            border-bottom: 3px solid #FFFF00;
+        }
+
+        .header-container {
+            max-width: 850px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        .badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background-color: rgba(255, 255, 255, 0.15);
+            padding: 6px 16px;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 20px;
+            backdrop-filter: blur(4px);
+        }
+
+        h1 {
+            font-family: var(--font-title);
+            font-size: 2.8rem;
+            font-weight: 700;
+            line-height: 1.25;
+            margin-bottom: 18px;
+        }
+
+        .header-subtitle {
+            font-size: 1.25rem;
+            opacity: 0.95;
+            max-width: 700px;
+            margin: 0 auto;
+            font-weight: 300;
+        }
+
+        /* Layout Principal */
+        main {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 50px 20px;
+        }
+
+        section {
+            margin-bottom: 60px;
+        }
+
+        .section-header {
+            margin-bottom: 30px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        h2 {
+            font-family: var(--font-title);
+            font-size: 1.8rem;
+            color: var(--primary);
+            position: relative;
+        }
+
+        body.high-contrast h2 {
+            color: #FFFF00;
+        }
+
+        .section-icon {
+            color: var(--accent);
+            width: 32px;
+            height: 32px;
+            flex-shrink: 0;
+        }
+
+        /* Seção Propósito */
+        .purpose-card {
+            background: var(--bg-card);
+            padding: 35px;
+            border-radius: 16px;
+            border: 1px solid var(--border);
+            box-shadow: var(--card-shadow);
+        }
+
+        .purpose-card p {
+            margin-bottom: 18px;
+            color: var(--text-main);
+        }
+
+        .purpose-card p:last-child {
+            margin-bottom: 0;
+        }
+
+        /* Grid de Funcionamento (Passo a Passo) */
+        .how-it-works-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 24px;
+        }
+
+        .step-card {
+            background: var(--bg-card);
+            padding: 30px;
+            border-radius: 16px;
+            border: 1px solid var(--border);
+            box-shadow: var(--card-shadow);
+            transition: transform 0.2s, box-shadow 0.2s;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .step-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--card-shadow-hover);
+        }
+
+        .step-number {
+            width: 42px;
+            height: 42px;
+            background-color: var(--primary-light);
+            color: #FFFFFF;
+            font-weight: 700;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+            font-family: var(--font-title);
+        }
+
+        body.high-contrast .step-number {
+            background-color: #FFFF00;
+            color: #000000;
+        }
+
+        .step-card h3 {
+            font-family: var(--font-title);
+            font-size: 1.2rem;
+            margin-bottom: 12px;
+            color: var(--text-main);
+        }
+
+        /* Componentes / Cards Eletrônicos */
+        .components-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background-color: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 24px;
+            box-shadow: var(--card-shadow);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .card:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--card-shadow-hover);
+        }
+
+        .card-icon {
+            width: 40px;
+            height: 40px;
+            color: var(--primary-light);
+            margin-bottom: 16px;
+            background: rgba(37, 99, 235, 0.1);
+            padding: 8px;
+            border-radius: 10px;
+        }
+
+        body.high-contrast .card-icon {
+            color: #FFFF00;
+            background: transparent;
+        }
+
+        .card h3 {
+            font-family: var(--font-title);
+            font-size: 1.15rem;
+            margin-bottom: 8px;
+            color: var(--text-main);
+        }
+
+        .card p {
+            font-size: 0.95rem;
+            color: var(--text-muted);
+        }
+
+        body.high-contrast .card p {
+            color: #FFFFFF;
+        }
+
+        /* Lista de Benefícios */
+        .benefits-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 16px;
+            list-style: none;
+        }
+
+        .benefit-item {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            padding: 20px;
+            border-radius: 12px;
+            display: flex;
+            align-items: flex-start;
+            gap: 16px;
+            box-shadow: var(--card-shadow);
+        }
+
+        .benefit-icon {
+            color: #10B981;
+            width: 24px;
+            height: 24px;
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+
+        body.high-contrast .benefit-icon {
+            color: #FFFF00;
+        }
+
+        /* Call to Action / Link Tinkercad */
+        .cta-section {
+            background: linear-gradient(135deg, #1E293B 0%, #0F172A 100%);
+            color: #FFFFFF;
+            padding: 40px;
+            border-radius: 16px;
+            text-align: center;
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.2);
+        }
+
+        body.high-contrast .cta-section {
+            background: #000000;
+            border: 2px solid #FFFF00;
+        }
+
+        .cta-section h3 {
+            font-family: var(--font-title);
+            font-size: 1.6rem;
+            margin-bottom: 12px;
+        }
+
+        .cta-section p {
+            color: #94A3B8;
+            max-width: 600px;
+            margin: 0 auto 24px auto;
+        }
+
+        body.high-contrast .cta-section p {
+            color: #FFFFFF;
+        }
+
+        .btn-primary {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background-color: var(--accent);
+            color: #000000;
+            padding: 14px 28px;
+            border-radius: 8px;
+            font-weight: 700;
+            text-decoration: none;
+            transition: all 0.2s;
+            font-family: var(--font-title);
+            box-shadow: 0 4px 12px rgba(245, 158, 11, 0.3);
+        }
+
+        .btn-primary:hover {
+            background-color: var(--accent-hover);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(245, 158, 11, 0.4);
+        }
+
+        /* Rodapé */
+        footer {
+            background-color: #0F172A;
+            color: #94A3B8;
+            padding: 40px 20px;
+            text-align: center;
+            border-top: 1px solid var(--border);
+            font-size: 0.95rem;
+        }
+
+        body.high-contrast footer {
+            background-color: #000000;
+            color: #FFFFFF;
+            border-top: 2px solid #FFFF00;
+        }
+
+        footer p {
+            margin-bottom: 8px;
+        }
+
+        footer a {
+            color: #38BDF8;
+            text-decoration: underline;
+        }
+
+        body.high-contrast footer a {
+            color: #FFFF00;
+        }
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+            h1 { font-size: 2.1rem; }
+            .header-subtitle { font-size: 1.05rem; }
+            main { padding: 30px 16px; }
+            .purpose-card, .cta-section { padding: 24px; }
+            .accessibility-container { justify-content: center; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Link direto para leitores de tela -->
+    <a href="#conteudo-principal" class="skip-link">Ir para o conteúdo principal</a>
+
+    <!-- Barra Superior de Acessibilidade -->
+    <div class="accessibility-bar" role="region" aria-label="Controles de Acessibilidade">
+        <div class="accessibility-container">
+            <button class="accessibility-btn" id="btn-read" onclick="toggleReadPage()">
+                <i data-lucide="volume-2"></i>
+                <span id="read-text">Ouvir Página</span>
+            </button>
+            <button class="accessibility-btn" onclick="changeFontSize(1)" aria-label="Aumentar tamanho do texto">
+                <i data-lucide="zoom-in"></i>
+                <span>A+</span>
+            </button>
+            <button class="accessibility-btn" onclick="changeFontSize(-1)" aria-label="Diminuir tamanho do texto">
+                <i data-lucide="zoom-out"></i>
+                <span>A-</span>
+            </button>
+            <button class="accessibility-btn" onclick="toggleHighContrast()" aria-label="Alternar Alto Contraste">
+                <i data-lucide="eye"></i>
+                <span>Alto Contraste</span>
+            </button>
+        </div>
+    </div>
+
+    <!-- Cabeçalho Principal -->
+    <header role="banner">
+        <div class="header-container">
+            <div class="badge">
+                <i data-lucide="cpu" style="width: 16px; height: 16px;"></i>
+                Tecnologia Assistiva
+            </div>
+            <h1>Bengala Ultrassônica Inteligente</h1>
+            <p class="header-subtitle">
+                Inovação tecnológica para ampliação da autonomia, prevenção de acidentes e segurança na locomoção urbana.
+            </p>
+        </div>
+    </header>
+
+    <!-- Conteúdo Principal -->
+    <main id="conteudo-principal" role="main">
+
+        <!-- 1. O Propósito -->
+        <section aria-labelledby="propogito-titulo">
+            <div class="section-header">
+                <i data-lucide="target" class="section-icon"></i>
+                <h2 id="propogito-titulo">1. O Propósito do Projeto</h2>
+            </div>
+            <div class="purpose-card">
+                <p>
+                    Pessoas com deficiência visual enfrentam, diariamente, diversas barreiras para se locomover com segurança nos espaços urbanos. A bengala tradicional é uma ferramenta fundamental para auxiliar na orientação e na identificação de obstáculos no caminho, principalmente aqueles localizados no solo. No entanto, ela apresenta limitações para detectar obstáculos que estão acima da altura do quadril.
+                </p>
+                <p>
+                    Objetos suspensos ou elevados, como galhos de árvores, orelhões, placas de sinalização, toldos e caçambas, representam sérios riscos de colisão, pois muitas vezes não entram em contato prévio com a ponta da bengala convencional.
+                </p>
+                <p>
+                    Pensando nisso, nosso projeto propõe o desenvolvimento de um protótipo capaz de ampliar o campo de percepção espacial do usuário, transformando a bengala tradicional em um <strong>dispositivo ativo de alerta e proteção</strong>. O objetivo é utilizar sensores para antecipar perigos e proporcionar maior autonomia, confiança e segurança nas ruas.
+                </p>
+            </div>
+        </section>
+
+        <!-- 2. Como Funciona -->
+        <section aria-labelledby="tecnologia-titulo">
+            <div class="section-header">
+                <i data-lucide="radar" class="section-icon"></i>
+                <h2 id="tecnologia-titulo">2. Como Funciona a Tecnologia</h2>
+            </div>
+            <div class="how-it-works-grid">
+                <div class="step-card">
+                    <div class="step-number">1</div>
+                    <h3>Emissão de Pulso</h3>
+                    <p>O sensor ultrassônico emite ondas sonoras em alta frequência (imperceptíveis ao ouvido humano) mapeando a área frontal.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">2</div>
+                    <h3>Cálculo de Distância</h3>
+                    <p>O sinal atinge o obstáculo e retorna. O microcontrolador mede o tempo desse trajeto e calcula a distância exata em milissegundos.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">3</div>
+                    <h3>Retorno Sensorial (Feedback)</h3>
+                    <p>Ao se aproximar de um perigo (ex: menos de 1 metro), o sistema ativa um buzzer sonoro ou módulo vibratório no cabo da bengala.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. Componentes -->
+        <section aria-labelledby="componentes-titulo">
+            <div class="section-header">
+                <i data-lucide="circuit-board" class="section-icon"></i>
+                <h2 id="componentes-titulo">3. Componentes do Protótipo</h2>
+            </div>
+            <div class="components-grid">
+                <div class="card">
+                    <i data-lucide="radio" class="card-icon"></i>
+                    <h3>Sensor Ultrassônico</h3>
+                    <p>Mapeia o espaço frontal e suspenso em um ângulo estratégico de detecção.</p>
+                </div>
+                <div class="card">
+                    <i data-lucide="cpu" class="card-icon"></i>
+                    <h3>Microcontrolador</h3>
+                    <p>Processa as leituras do sensor em tempo real e decide o momento de emitir os alertas.</p>
+                </div>
+                <div class="card">
+                    <i data-lucide="bell-ring" class="card-icon"></i>
+                    <h3>Buzzer / Vibrador</h3>
+                    <p>Emite sinal sonoro e/ou tátil para avisar o usuário sem comprometer sua atenção auditiva.</p>
+                </div>
+                <div class="card">
+                    <i data-lucide="battery-charging" class="card-icon"></i>
+                    <h3>Fonte de Alimentação</h3>
+                    <p>Bateria recarregável projetada para garantir leveza e longa autonomia de uso.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. Benefícios -->
+        <section aria-labelledby="beneficios-titulo">
+            <div class="section-header">
+                <i data-lucide="shield-check" class="section-icon"></i>
+                <h2 id="beneficios-titulo">4. Principais Benefícios</h2>
+            </div>
+            <ul class="benefits-list">
+                <li class="benefit-item">
+                    <i data-lucide="check-circle-2" class="benefit-icon"></i>
+                    <div>
+                        <strong>Mais Autonomia:</strong> Auxilia na mobilidade independente, reduzindo a dependência de acompanhantes.
+                    </div>
+                </li>
+                <li class="benefit-item">
+                    <i data-lucide="check-circle-2" class="benefit-icon"></i>
+                    <div>
+                        <strong>Prevenção de Acidentes:</strong> Detecta objetos suspensos e aéreos antes que ocorra colisão física.
+                    </div>
+                </li>
+                <li class="benefit-item">
+                    <i data-lucide="check-circle-2" class="benefit-icon"></i>
+                    <div>
+                        <strong>Fácil Integração:</strong> Pode ser instalado na estrutura de bengalas tradicionais sem perder a função básica.
+                    </div>
+                </li>
+                <li class="benefit-item">
+                    <i data-lucide="check-circle-2" class="benefit-icon"></i>
+                    <div>
+                        <strong>Baixo Custo:</strong> Utiliza componentes acessíveis e de fácil manutenção para democratizar o acesso.
+                    </div>
+                </li>
+            </ul>
+        </section>
+
+        <!-- Simulação / Link Tinkercad -->
+        <section aria-label="Simulação do Projeto">
+            <div class="cta-section">
+                <h3>Quer ver o projeto funcionando na prática?</h3>
+                <p>Acesse nossa simulação interativa no Tinkercad para explorar o esquema eletrônico e o código-fonte em tempo real.</p>
+                <a href="https://www.tinkercad.com/things/8HfibT6SnAx-sensor-de-distancia/editel" 
+                   class="btn-primary" 
+                   target="_blank" 
+                   rel="noopener noreferrer"
+                   aria-label="Ver Simulação e Esquema Eletrônico no Tinkercad (abre em uma nova guia)">
+                    <i data-lucide="external-link"></i>
+                    Ver Simulação no Tinkercad
+                </a>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Rodapé -->
+    <footer role="contentinfo">
+        <p><strong>Projeto Bengala Ultrassônica Inteligente</strong> &copy; 2026 — Pesquisa em Tecnologia Assistiva.</p>
+        <p>Desenvolvido focado em Acessibilidade, Inclusão e Mobilidade Urbana.</p>
+    </footer>
+
+    <!-- Scripts de Interatividade e Acessibilidade -->
+    <script>
+        // Inicializar Ícones Lucide
+        lucide.createIcons();
+
+        // 1. Alto Contraste
+        function toggleHighContrast() {
+            document.body.classList.toggle('high-contrast');
+            const isContrast = document.body.classList.contains('high-contrast');
+            localStorage.setItem('highContrast', isContrast);
+        }
+
+        // Recuperar preferência do usuário
+        if (localStorage.getItem('highContrast') === 'true') {
+            document.body.classList.add('high-contrast');
+        }
+
+        // 2. Controle do Tamanho da Fonte
+        let currentFontSize = 100; // Porcentagem
+        function changeFontSize(delta) {
+            currentFontSize += delta * 10;
+            if (currentFontSize < 80) currentFontSize = 80;
+            if (currentFontSize > 150) currentFontSize = 150;
+            document.documentElement.style.fontSize = currentFontSize + '%';
+        }
+
+        // 3. Leitura por Voz (Sintetizador de Áudio nativo do navegador)
+        let isReading = false;
+        let utterance = null;
+
+        function toggleReadPage() {
+            const btnText = document.getElementById('read-text');
+            
+            if ('speechSynthesis' in window) {
+                if (isReading) {
+                    window.speechSynthesis.cancel();
+                    isReading = false;
+                    btnText.innerText = 'Ouvir Página';
+                } else {
+                    const textToRead = document.getElementById('conteudo-principal').innerText;
+                    utterance = new SpeechSynthesisUtterance(textToRead);
+                    utterance.lang = 'pt-BR';
+                    utterance.rate = 1.0;
+
+                    utterance.onend = function() {
+                        isReading = false;
+                        btnText.innerText = 'Ouvir Página';
+                    };
+
+                    window.speechSynthesis.speak(utterance);
+                    isReading = true;
+                    btnText.innerText = 'Parar Leitura';
+                }
+            } else {
+                alert('Desculpe, o seu navegador não suporta a função de leitura por voz.');
+            }
+        }
+    </script>
+</body>
+</html>
+
+
+
+Suas conversas de SEED não são usadas para aprimorar nossos modelos. O Gemini não é humano. Ele pode cometer erros. Por isso, cheque as respostas. Sua privacidade e o GeminiAbre em uma nova janela
+
+Analisando
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Projeto de tecnologia assistiva: Bengala Ultrassônica Inteligente para mobilidade, autonomia e segurança visual.">
+    <title>Bengala Ultrassônica Inteligente - Tecnologia Assistiva</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;600;700&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <style>
+        :root {
+            --primary: #1E3A8A;
+            --primary-light: #2563EB;
+            --accent: #F59E0B;
+            --accent-hover: #D97706;
+            --bg-body: #F8FAFC;
+            --bg-card: #FFFFFF;
+            --text-main: #0F172A;
+            --text-muted: #475569;
+            --border: #E2E8F0;
+            --font-main: 'Open Sans', sans-serif;
+            --font-title: 'Lexend', sans-serif;
+            --focus-ring: #2563EB;
+            --card-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+            --card-shadow-hover: 0 10px 15px -3px rgba(0, 0, 0, 0.08), 0 4px 6px -2px rgba(0, 0, 0, 0.04);
+        }
+
+        /* Alto Contraste */
+        body.high-contrast {
+            --primary: #FFFF00;
+            --primary-light: #FFFF00;
+            --accent: #FFFF00;
+            --accent-hover: #00FFFF;
+            --bg-body: #000000;
+            --bg-card: #000000;
+            --text-main: #FFFFFF;
+            --text-muted: #E2E8F0;
+            --border: #FFFFFF;
+            --focus-ring: #FFFF00;
+            --card-shadow: none;
+            --card-shadow-hover: none;
+        }
+
+        body.high-contrast .card, 
+        body.high-contrast .benefit-item,
+        body.high-contrast .step-card {
+            border: 2px solid #FFFFFF !important;
+        }
+
+        body.high-contrast .btn-primary,
+        body.high-contrast .accessibility-btn {
+            background-color: #FFFF00 !important;
+            color: #000000 !important;
+            border: 2px solid #FFFFFF !important;
+            font-weight: bold;
+        }
+
+        /* Reset e Base */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: var(--font-main);
+            background-color: var(--bg-body);
+            color: var(--text-main);
+            line-height: 1.7;
+            font-size: 1.05rem;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        /* Links de Atalho */
+        .skip-link {
+            position: absolute;
+            top: -40px;
+            left: 10px;
+            background: var(--accent);
+            color: #000;
+            padding: 8px 16px;
+            z-index: 1000;
+            font-weight: bold;
+            border-radius: 4px;
+            text-decoration: none;
+            transition: top 0.2s;
+        }
+
+        .skip-link:focus {
+            top: 10px;
+        }
+
+        /* Foco Acessível Globais */
+        a:focus-visible, button:focus-visible {
+            outline: 3px solid var(--focus-ring);
+            outline-offset: 3px;
+        }
+
+        /* Barra de Ferramentas de Acessibilidade */
+        .accessibility-bar {
+            background-color: #0F172A;
+            color: #FFFFFF;
+            padding: 8px 0;
+            position: sticky;
+            top: 0;
+            z-index: 999;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .accessibility-container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .accessibility-btn {
+            background: rgba(255, 255, 255, 0.1);
+            color: #FFFFFF;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            padding: 6px 12px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 0.9rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            transition: all 0.2s;
+            font-family: var(--font-main);
+        }
+
+        .accessibility-btn:hover {
+            background: rgba(255, 255, 255, 0.25);
+        }
+
+        /* Header / Banner Principal */
+        header {
+            background: linear-gradient(135deg, #1E3A8A 0%, #1E40AF 100%);
+            color: #FFFFFF;
+            padding: 70px 20px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        header::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.05) 0%, transparent 60%);
+            pointer-events: none;
+        }
+
+        body.high-contrast header {
+            background: #000000;
+            border-bottom: 3px solid #FFFF00;
+        }
+
+        .header-container {
+            max-width: 850px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        .badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background-color: rgba(255, 255, 255, 0.15);
+            padding: 6px 16px;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 20px;
+            backdrop-filter: blur(4px);
+        }
+
+        h1 {
+            font-family: var(--font-title);
+            font-size: 2.8rem;
+            font-weight: 700;
+            line-height: 1.25;
+            margin-bottom: 18px;
+        }
+
+        .header-subtitle {
+            font-size: 1.25rem;
+            opacity: 0.95;
+            max-width: 700px;
+            margin: 0 auto;
+            font-weight: 300;
+        }
+
+        /* Layout Principal */
+        main {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 50px 20px;
+        }
+
+        section {
+            margin-bottom: 60px;
+        }
+
+        .section-header {
+            margin-bottom: 30px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        h2 {
+            font-family: var(--font-title);
+            font-size: 1.8rem;
+            color: var(--primary);
+            position: relative;
+        }
+
+        body.high-contrast h2 {
+            color: #FFFF00;
+        }
+
+        .section-icon {
+            color: var(--accent);
+            width: 32px;
+            height: 32px;
+            flex-shrink: 0;
+        }
+
+        /* Seção Propósito */
+        .purpose-card {
+            background: var(--bg-card);
+            padding: 35px;
+            border-radius: 16px;
+            border: 1px solid var(--border);
+            box-shadow: var(--card-shadow);
+        }
+
+        .purpose-card p {
+            margin-bottom: 18px;
+            color: var(--text-main);
+        }
+
+        .purpose-card p:last-child {
+            margin-bottom: 0;
+        }
+
+        /* Grid de Funcionamento (Passo a Passo) */
+        .how-it-works-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 24px;
+        }
+
+        .step-card {
+            background: var(--bg-card);
+            padding: 30px;
+            border-radius: 16px;
+            border: 1px solid var(--border);
+            box-shadow: var(--card-shadow);
+            transition: transform 0.2s, box-shadow 0.2s;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .step-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--card-shadow-hover);
+        }
+
+        .step-number {
+            width: 42px;
+            height: 42px;
+            background-color: var(--primary-light);
+            color: #FFFFFF;
+            font-weight: 700;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+            font-family: var(--font-title);
+        }
+
+        body.high-contrast .step-number {
+            background-color: #FFFF00;
+            color: #000000;
+        }
+
+        .step-card h3 {
+            font-family: var(--font-title);
+            font-size: 1.2rem;
+            margin-bottom: 12px;
+            color: var(--text-main);
+        }
+
+        /* Componentes / Cards Eletrônicos */
+        .components-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background-color: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 24px;
+            box-shadow: var(--card-shadow);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .card:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--card-shadow-hover);
+        }
+
+        .card-icon {
+            width: 40px;
+            height: 40px;
+            color: var(--primary-light);
+            margin-bottom: 16px;
+            background: rgba(37, 99, 235, 0.1);
+            padding: 8px;
+            border-radius: 10px;
+        }
+
+        body.high-contrast .card-icon {
+            color: #FFFF00;
+            background: transparent;
+        }
+
+        .card h3 {
+            font-family: var(--font-title);
+            font-size: 1.15rem;
+            margin-bottom: 8px;
+            color: var(--text-main);
+        }
+
+        .card p {
+            font-size: 0.95rem;
+            color: var(--text-muted);
+        }
+
+        body.high-contrast .card p {
+            color: #FFFFFF;
+        }
+
+        /* Lista de Benefícios */
+        .benefits-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 16px;
+            list-style: none;
+        }
+
+        .benefit-item {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            padding: 20px;
+            border-radius: 12px;
+            display: flex;
+            align-items: flex-start;
+            gap: 16px;
+            box-shadow: var(--card-shadow);
+        }
+
+        .benefit-icon {
+            color: #10B981;
+            width: 24px;
+            height: 24px;
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+
+        body.high-contrast .benefit-icon {
+            color: #FFFF00;
+        }
+
+        /* Call to Action / Link Tinkercad */
+        .cta-section {
+            background: linear-gradient(135deg, #1E293B 0%, #0F172A 100%);
+            color: #FFFFFF;
+            padding: 40px;
+            border-radius: 16px;
+            text-align: center;
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.2);
+        }
+
+        body.high-contrast .cta-section {
+            background: #000000;
+            border: 2px solid #FFFF00;
+        }
+
+        .cta-section h3 {
+            font-family: var(--font-title);
+            font-size: 1.6rem;
+            margin-bottom: 12px;
+        }
+
+        .cta-section p {
+            color: #94A3B8;
+            max-width: 600px;
+            margin: 0 auto 24px auto;
+        }
+
+        body.high-contrast .cta-section p {
+            color: #FFFFFF;
+        }
+
+        .btn-primary {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background-color: var(--accent);
+            color: #000000;
+            padding: 14px 28px;
+            border-radius: 8px;
+            font-weight: 700;
+            text-decoration: none;
+            transition: all 0.2s;
+            font-family: var(--font-title);
+            box-shadow: 0 4px 12px rgba(245, 158, 11, 0.3);
+        }
+
+        .btn-primary:hover {
+            background-color: var(--accent-hover);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(245, 158, 11, 0.4);
+        }
+
+        /* Rodapé */
+        footer {
+            background-color: #0F172A;
+            color: #94A3B8;
+            padding: 40px 20px;
+            text-align: center;
+            border-top: 1px solid var(--border);
+            font-size: 0.95rem;
+        }
+
+        body.high-contrast footer {
+            background-color: #000000;
+            color: #FFFFFF;
+            border-top: 2px solid #FFFF00;
+        }
+
+        footer p {
+            margin-bottom: 8px;
+        }
+
+        footer a {
+            color: #38BDF8;
+            text-decoration: underline;
+        }
+
+        body.high-contrast footer a {
+            color: #FFFF00;
+        }
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+            h1 { font-size: 2.1rem; }
+            .header-subtitle { font-size: 1.05rem; }
+            main { padding: 30px 16px; }
+            .purpose-card, .cta-section { padding: 24px; }
+            .accessibility-container { justify-content: center; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Link direto para leitores de tela -->
+    <a href="#conteudo-principal" class="skip-link">Ir para o conteúdo principal</a>
+
+    <!-- Barra Superior de Acessibilidade -->
+    <div class="accessibility-bar" role="region" aria-label="Controles de Acessibilidade">
+        <div class="accessibility-container">
+            <button class="accessibility-btn" id="btn-read" onclick="toggleReadPage()">
+                <i data-lucide="volume-2"></i>
+                <span id="read-text">Ouvir Página</span>
+            </button>
+            <button class="accessibility-btn" onclick="changeFontSize(1)" aria-label="Aumentar tamanho do texto">
+                <i data-lucide="zoom-in"></i>
+                <span>A+</span>
+            </button>
+            <button class="accessibility-btn" onclick="changeFontSize(-1)" aria-label="Diminuir tamanho do texto">
+                <i data-lucide="zoom-out"></i>
+                <span>A-</span>
+            </button>
+            <button class="accessibility-btn" onclick="toggleHighContrast()" aria-label="Alternar Alto Contraste">
+                <i data-lucide="eye"></i>
+                <span>Alto Contraste</span>
+            </button>
+        </div>
+    </div>
+
+    <!-- Cabeçalho Principal -->
+    <header role="banner">
+        <div class="header-container">
+            <div class="badge">
+                <i data-lucide="cpu" style="width: 16px; height: 16px;"></i>
+                Tecnologia Assistiva
+            </div>
+            <h1>Bengala Ultrassônica Inteligente</h1>
+            <p class="header-subtitle">
+                Inovação tecnológica para ampliação da autonomia, prevenção de acidentes e segurança na locomoção urbana.
+            </p>
+        </div>
+    </header>
+
+    <!-- Conteúdo Principal -->
+    <main id="conteudo-principal" role="main">
+
+        <!-- 1. O Propósito -->
+        <section aria-labelledby="propogito-titulo">
+            <div class="section-header">
+                <i data-lucide="target" class="section-icon"></i>
+                <h2 id="propogito-titulo">1. O Propósito do Projeto</h2>
+            </div>
+            <div class="purpose-card">
+                <p>
+                    Pessoas com deficiência visual enfrentam, diariamente, diversas barreiras para se locomover com segurança nos espaços urbanos. A bengala tradicional é uma ferramenta fundamental para auxiliar na orientação e na identificação de obstáculos no caminho, principalmente aqueles localizados no solo. No entanto, ela apresenta limitações para detectar obstáculos que estão acima da altura do quadril.
+                </p>
+                <p>
+                    Objetos suspensos ou elevados, como galhos de árvores, orelhões, placas de sinalização, toldos e caçambas, representam sérios riscos de colisão, pois muitas vezes não entram em contato prévio com a ponta da bengala convencional.
+                </p>
+                <p>
+                    Pensando nisso, nosso projeto propõe o desenvolvimento de um protótipo capaz de ampliar o campo de percepção espacial do usuário, transformando a bengala tradicional em um <strong>dispositivo ativo de alerta e proteção</strong>. O objetivo é utilizar sensores para antecipar perigos e proporcionar maior autonomia, confiança e segurança nas ruas.
+                </p>
+            </div>
+        </section>
+
+        <!-- 2. Como Funciona -->
+        <section aria-labelledby="tecnologia-titulo">
+            <div class="section-header">
+                <i data-lucide="radar" class="section-icon"></i>
+                <h2 id="tecnologia-titulo">2. Como Funciona a Tecnologia</h2>
+            </div>
+            <div class="how-it-works-grid">
+                <div class="step-card">
+                    <div class="step-number">1</div>
+                    <h3>Emissão de Pulso</h3>
+                    <p>O sensor ultrassônico emite ondas sonoras em alta frequência (imperceptíveis ao ouvido humano) mapeando a área frontal.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">2</div>
+                    <h3>Cálculo de Distância</h3>
+                    <p>O sinal atinge o obstáculo e retorna. O microcontrolador mede o tempo desse trajeto e calcula a distância exata em milissegundos.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">3</div>
+                    <h3>Retorno Sensorial (Feedback)</h3>
+                    <p>Ao se aproximar de um perigo (ex: menos de 1 metro), o sistema ativa um buzzer sonoro ou módulo vibratório no cabo da bengala.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. Componentes -->
+        <section aria-labelledby="componentes-titulo">
+            <div class="section-header">
+                <i data-lucide="circuit-board" class="section-icon"></i>
+                <h2 id="componentes-titulo">3. Componentes do Protótipo</h2>
+            </div>
+            <div class="components-grid">
+                <div class="card">
+                    <i data-lucide="radio" class="card-icon"></i>
+                    <h3>Sensor Ultrassônico</h3>
+                    <p>Mapeia o espaço frontal e suspenso em um ângulo estratégico de detecção.</p>
+                </div>
+                <div class="card">
+                    <i data-lucide="cpu" class="card-icon"></i>
+                    <h3>Microcontrolador</h3>
+                    <p>Processa as leituras do sensor em tempo real e decide o momento de emitir os alertas.</p>
+                </div>
+                <div class="card">
+                    <i data-lucide="bell-ring" class="card-icon"></i>
+                    <h3>Buzzer / Vibrador</h3>
+                    <p>Emite sinal sonoro e/ou tátil para avisar o usuário sem comprometer sua atenção auditiva.</p>
+                </div>
+                <div class="card">
+                    <i data-lucide="battery-charging" class="card-icon"></i>
+                    <h3>Fonte de Alimentação</h3>
+                    <p>Bateria recarregável projetada para garantir leveza e longa autonomia de uso.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. Benefícios -->
+        <section aria-labelledby="beneficios-titulo">
+            <div class="section-header">
+                <i data-lucide="shield-check" class="section-icon"></i>
+                <h2 id="beneficios-titulo">4. Principais Benefícios</h2>
+            </div>
+            <ul class="benefits-list">
+                <li class="benefit-item">
+                    <i data-lucide="check-circle-2" class="benefit-icon"></i>
+                    <div>
+                        <strong>Mais Autonomia:</strong> Auxilia na mobilidade independente, reduzindo a dependência de acompanhantes.
+                    </div>
+                </li>
+                <li class="benefit-item">
+                    <i data-lucide="check-circle-2" class="benefit-icon"></i>
+                    <div>
+                        <strong>Prevenção de Acidentes:</strong> Detecta objetos suspensos e aéreos antes que ocorra colisão física.
+                    </div>
+                </li>
+                <li class="benefit-item">
+                    <i data-lucide="check-circle-2" class="benefit-icon"></i>
+                    <div>
+                        <strong>Fácil Integração:</strong> Pode ser instalado na estrutura de bengalas tradicionais sem perder a função básica.
+                    </div>
+                </li>
+                <li class="benefit-item">
+                    <i data-lucide="check-circle-2" class="benefit-icon"></i>
+                    <div>
+                        <strong>Baixo Custo:</strong> Utiliza componentes acessíveis e de fácil manutenção para democratizar o acesso.
+                    </div>
+                </li>
+            </ul>
+        </section>
+
+        <!-- Simulação / Link Tinkercad -->
+        <section aria-label="Simulação do Projeto">
+            <div class="cta-section">
+                <h3>Quer ver o projeto funcionando na prática?</h3>
+                <p>Acesse nossa simulação interativa no Tinkercad para explorar o esquema eletrônico e o código-fonte em tempo real.</p>
+                <a href="https://www.tinkercad.com/things/8HfibT6SnAx-sensor-de-distancia/editel" 
+                   class="btn-primary" 
+                   target="_blank" 
+                   rel="noopener noreferrer"
+                   aria-label="Ver Simulação e Esquema Eletrônico no Tinkercad (abre em uma nova guia)">
+                    <i data-lucide="external-link"></i>
+                    Ver Simulação no Tinkercad
+                </a>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Rodapé -->
+    <footer role="contentinfo">
+        <p><strong>Projeto Bengala Ultrassônica Inteligente</strong> &copy; 2026 — Pesquisa em Tecnologia Assistiva.</p>
+        <p>Desenvolvido focado em Acessibilidade, Inclusão e Mobilidade Urbana.</p>
+    </footer>
+
+    <!-- Scripts de Interatividade e Acessibilidade -->
+    <script>
+        // Inicializar Ícones Lucide
+        lucide.createIcons();
+
+        // 1. Alto Contraste
+        function toggleHighContrast() {
+            document.body.classList.toggle('high-contrast');
+            const isContrast = document.body.classList.contains('high-contrast');
+            localStorage.setItem('highContrast', isContrast);
+        }
+
+        // Recuperar preferência do usuário
+        if (localStorage.getItem('highContrast') === 'true') {
+            document.body.classList.add('high-contrast');
+        }
+
+        // 2. Controle do Tamanho da Fonte
+        let currentFontSize = 100; // Porcentagem
+        function changeFontSize(delta) {
+            currentFontSize += delta * 10;
+            if (currentFontSize < 80) currentFontSize = 80;
+            if (currentFontSize > 150) currentFontSize = 150;
+            document.documentElement.style.fontSize = currentFontSize + '%';
+        }
+
+        // 3. Leitura por Voz (Sintetizador de Áudio nativo do navegador)
+        let isReading = false;
+        let utterance = null;
+
+        function toggleReadPage() {
+            const btnText = document.getElementById('read-text');
+            
+            if ('speechSynthesis' in window) {
+                if (isReading) {
+                    window.speechSynthesis.cancel();
+                    isReading = false;
+                    btnText.innerText = 'Ouvir Página';
+                } else {
+                    const textToRead = document.getElementById('conteudo-principal').innerText;
+                    utterance = new SpeechSynthesisUtterance(textToRead);
+                    utterance.lang = 'pt-BR';
+                    utterance.rate = 1.0;
+
+                    utterance.onend = function() {
+                        isReading = false;
+                        btnText.innerText = 'Ouvir Página';
+                    };
+
+                    window.speechSynthesis.speak(utterance);
+                    isReading = true;
+                    btnText.innerText = 'Parar Leitura';
+                }
+            } else {
+                alert('Desculpe, o seu navegador não suporta a função de leitura por voz.');
+            }
+        }
+    </script>
+</body>
+</html>
